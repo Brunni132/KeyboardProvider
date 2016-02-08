@@ -6,14 +6,14 @@ KeyboardProvider is an app running OS X Snow Leopard and higher (10.6). It monit
 
 Any app can connect to the server by providing by its IP and port, and a very simple C client (~60 lines) is provided for easy set-up. The only code you have to provide is the following:
 
-```#include "kbdclient.h"
+	#include "kbdclient.h"
 
-void init_game() {
-    kbdclient_init("127.0.0.1", 53841);
-    ...
-}
+	void init_game() {
+	    kbdclient_init("127.0.0.1", 53841);
+	    ...
+	}
 
-void do_frame() {
-    if (kbdclient_held(KEY_LEFT))
-        Some action...
-}```
+	void do_frame() {
+	    if (kbdclient_held(KEY_LEFT))
+	        Some action...
+	}
